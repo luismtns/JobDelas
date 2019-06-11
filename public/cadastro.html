@@ -22,9 +22,7 @@
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
     <link href="stylesheets/responsive.css" rel="stylesheet" type="text/css" />
 </head>
-
-
-<body> 
+<body>
     <main id="login">
         <header>
             <div class="main-nav">
@@ -35,44 +33,89 @@
                                 <img src="images/logo-jobdelas-8.png" class="img-fluid logo">
                             </a>
                         </div>
-                        <div class="login-cadastro-section col-md-4 col-lg-4"> 
-                            <a href="./login.html" class="btn button sign-in-btn purple-color">Entrar</a>
-                            <a href="./cadastro.html" class="btn button register-btn">Cadastre-se</a>
-                        </div> 
+                        <div class="login-cadastro-section col-md-4 col-lg-4">
+                            <a href="/login.html" class="btn button sign-in-btn purple-color">Entrar</a>
+                            <a href="" class="btn button register-btn" data-toggle="modal" data-target="#modalExemplo">Cadastre-se</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header> 
+        </header>
         <section id="autentication-section">
-            <div class="container">
+            <div class="container pb-5 mb-5">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-12 col-lg-12 col-sm-12 centered-section p-0 fade-in">
-                        <div class="col-md-6 col-lg-6 col-sm-12 left-side left-background">
+                        <div class="col-md-5 col-lg-5 col-sm-12 left-side left-background">
                             <div class="call-section">
-                                <h1 class="purple-color regular-weight">Mulheres, uni-vos!<br>
+                                <h1 class="purple-color light-weight">Mulheres, uni-vos!<br>
                                         <b>Seu próximo emprego<br>
                                                 está aqui!</b></h1>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-sm-12 right-side">
+                        <div class="col-md-7 col-lg-7 col-sm-12 right-side" style="top:inherit">
                             <div class="title-section">
-                                <p class="gray-color">Insira os dados abaixo para cadastrar-se em nossa plataforma!</p>
+                                <p class="blue-color">Informe os dados abaixo para se cadastrar em nossa plataforma!</p>
                             </div>
                             <div class="infos-section">
-                                <form id="loginForm" class="needs-validation" novalidate>
+                                <form action="#" id="cadastroForm" class="needs-validation" novalidate>
+                                    <p class="blue-color w-100 text-center mb-1"><b>Você quer se cadastrar como:</b></p>
+                                    <div class="w-100 d-flex  justify-content-center purple-color pb-4">
+                                        <input type="RADIO" name="tipo-cadastro" value="Profissional"> Profissional
+                                        <input type="RADIO" name="tipo-cadastro" value="Recrutadora" class="ml-2"> Recrutadora
+                                    </div>
+                                    <div class="form-group input-section select-section">
+                                        <label for="RG" class="icon-label">Profissão:</label>
+                                        <select class="category-input" id="profissaoCadastroInput" required>
+                                            <option class="gray-color" value="">Escolha uma Categoria</option>
+                                            <option class="gray-color" value="Designer">Designer</option>
+                                            <option class="gray-color" value="Eletricista">Eletricista</option>
+                                            <option class="gray-color" value="Encanadora">Encanadora</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group input-section select-section">
+                                        <label for="foto-perfil" class="icon-label">Foto de Perfil</label>
+                                        <input type="file" class="form-control-file" id="fotoCadastroPerfil" accept=".png,.jpg,.jpeg">
+                                    </div>
                                     <div class="form-group input-section">
-                                        <label for="e-mail" class="icon-label"><i class="far fa-shield-alt"></i></label>
-                                        <input id="emailAuthInput" type="text" class="form-control" id="e-mail" placeholder="seuemail@seuemail.com.br" name="e-mail" required>
+                                        <label for="name" class="icon-label"><i class="fal fa-signature"></i></label>
+                                        <input type="text" class="form-control" id="nameCadastroInput" placeholder="Nome Completo" name="name" required>
+                                        <div class="valid-feedback">Nome válido! :)</div>
+                                        <div class="invalid-feedback">Insira um Nome!</div>
+                                    </div>
+                                    <div class="form-group input-section">
+                                        <label for="CPF" class="icon-label"><i class="fal fa-id-card"></i></label>
+                                        <input type="CPF" class="form-control" id="cpfCadastroInput" placeholder="CPF" name="CPF" required>
+                                        <div class="valid-feedback">CPF válido! :)</div>
+                                        <div class="invalid-feedback">CPF Inválido!</div>
+                                    </div>
+
+                                    <div class="form-group input-section">
+                                        <label for="phone" class="icon-label"><i class="fab fa-whatsapp"></i></label>
+                                        <input type="phone" class="form-control" id="phoneCadastroInput" placeholder="Telefone Celular (de preferência whatsapp)" name="phone" required>
+                                        <div class="valid-feedback">Telefone válido! :)</div>
+                                        <div class="invalid-feedback">Telefone Inválido!</div>
+                                    </div>
+
+                                    <div class="form-group input-section">
+                                        <label for="cepCadastroInput" class="icon-label"><i class="fal fa-map-marker"></i></label>
+                                        <input type="tel" class="form-control" id="cepCadastroInput" placeholder="CEP" name="location" required>
+                                        <div class="valid-feedback">CEP válida! :)</div>
+                                        <div class="invalid-feedback">CEP Inválida!</div>
+                                    </div>
+
+                                    <div class="form-group input-section">
+                                        <label for="e-mail" class="icon-label"><i class="fal fa-at"></i></label>
+                                        <input type="text" class="form-control" id="emailCadastroInput" placeholder="seuemail@seuemail.com.br" name="e-mail" required>
                                         <div class="valid-feedback">E-mail válido! :)</div>
                                         <div class="invalid-feedback">E-mail Inválido!</div>
                                     </div>
                                     <div class="form-group input-section">
-                                        <label for="password" class="icon-label"><i class="far fa-shield-alt"></i></label>
-                                        <input id="passwordAuthInput" type="password" class="form-control" id="password" placeholder="•••••••••" name="password" required>
+                                        <label for="password" class="icon-label"><i class="fal fa-lock"></i></label>
+                                        <input type="password" class="form-control" id="passwordCadastroInput" placeholder="Senha desejada" name="password" required>
                                         <div class="valid-feedback">Senha válida! :)</div>
                                         <div class="invalid-feedback">Senha Inválida!</div>
                                     </div>
-                                    <button type="submit" class="button btn gradient-bg w-100">Entrar!</button>
+                                    <button type="submit" class="button btn blue-gradient-btn w-100">Cadastrar!</button>
                                 </form>
                             </div>
                         </div>
@@ -80,8 +123,43 @@
                 </div>
             </div>
         </section>
-    </main> 
-</body> 
+    </main>
+
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog col-md-6 col-sm-12 col-lg-6" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="purple-color small-title" id="user-name">Identifique o seu gênero abaixo antes de se cadastrar!</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mt-4 d-flex align-items-center justify-content-center">
+                    <button class="btn button white-bg blue-color shadow-box m-0 mr-3">
+                        <a href="#" class="white-color primary-link light-weight nao-permitido">Sou homem!</a>
+                    </button>
+                    <button class="btn button white-bg blue-color shadow-box m-0 purple-bg">
+                        <a href="/cadastro.html" class="blue-color primary-link light-weight">Sou mulher!</a>
+                    </button>
+                </div>
+                <p class="text-center nao-permitido-text fade-in">Desculpe, mas só aceitamos mulheres em nossa plataforma,
+                    <br>por questões de segurança e dos nossos ideais de visibilidade feminina no mercado de trabalho!
+                    <button type="button" class="close close-btn-text" data-dismiss="modal" aria-label="Fechar">
+                        Voltar
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section style="background-color:#ededed" id="rodape">
+        <div class="container">
+            <p class="gray-color text-center py-4 small">
+                CLÁUSULA DE RESERVA (Lei 9.610/98 - LEI DE DIREITOS AUTORAIS): Esta plataforma foi publicada e é mantida pelos discentes do 5º semestre, do Curso de Graduação em Design Digital, da Universidade Anhembi Morumbi, visando a atender às exigências da disciplina PROJETO INTERDISCIPLINAR: CIBERATIVISMO. Trata-se de uma publicação temporária para propósitos estritamente acadêmicos e sem fins lucrativos. Em atendimento às exigências da Lei 9.610/98, do parágrafo 4°, do Artigo 184, do Código Penal, os discentes responsáveis por esta publicação colocam-se à disposição, por intermédio do e-mail jobdelas.projetointer@gmail.com, para dirimir quaisquer dúvidas referentes à eventual violação de direitos autorais, comprometendo-se desde já, a retirar do ar, qualquer texto, som ou imagem pertencente a autor ou titular que se sinta direta ou indiretamente prejudicado.
+            </p>
+        </div>
+    </section>
+</body>
 <!-- JS -->
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
@@ -95,5 +173,5 @@
 	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
 <!-- JobDelas Configs -->
 <script src="js/app.js" type="text/javascript"></script>
-<script src="js/session.js" type="text/javascript"></script>
+<script src="js/auth.js" type="text/javascript"></script>
 </html>

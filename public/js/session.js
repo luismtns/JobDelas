@@ -4,14 +4,14 @@ $('#signOutUser').on('click', ()=>{
 
   firebase.auth().signOut()
   .then(function(e) {
-    window.location.href = "./login.html";
+    window.location.href = "./landing-informacoes.html";
   })
   .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorCode);
-    console.log(errorMessage);
+    // console.log(errorCode);
+    // console.log(errorMessage);
     // ...
   });
 });
@@ -19,11 +19,15 @@ $('#signOutUser').on('click', ()=>{
 //Event Listener Session
 firebase.auth().onAuthStateChanged(function(user) {
   if(user){
-    console.log("Logado Como" + JSON.stringify(user.displayName));
-    displayUserName(user.displayName.split(' ')[0])
+    firebase.database().ref('usuarios').child(user.uid).once('value', function(snapshot){
+      var json = snapshot.val()
+      // console.log("Logado Como" + JSON.stringify(json));
+      displayUserName(json.nome.split(' ')[0])
+
+    });
   }else{
-    
-    console.log("Deslogado");
+    window.location.href = "./landing-informacoes.html"
+    // console.log("Deslogado");
   }
 });
 
@@ -33,3 +37,10 @@ function displayUserName(name){
   }
 }
 
+$('#yourProfile').click(()=>{
+  window.location.href = "./profile-page-profissional.html"
+});
+
+$('#yourConfigs').click(()=>{
+  window.location.href = "./configuracoes.html"
+});

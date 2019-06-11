@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jobDelas - Recrutação de mulhere, para mulheres</title>
+    <meta name="description" content="ecrutação de mulhere, para mulheres" />
+    <meta name="keywords" content="recrutação, jobdelas, hunting, tecnologia, mulheres, feminismo" />
+    <meta name="author" content="raferrreira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--[if IE]>
+          <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+          <![endif]-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/responsive.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <main id="profile-page">
+        <header>
+            <div class="main-nav">
+                <div class="container">
+                    <div class="logo-jobdelas col-md-2 col-lg-2 col-sm-6">
+                        <a href="./index.html">
+                            <img src="images/logo-jobdelas-8.png" class="img-fluid logo">
+                        </a>
+                    </div>
+                    <div class="category-search-content col-md-8 col-lg-8">
+                        <div class="col-md-12 col-lg-12 category-selection pl-5">
+                            <select class="col-md-6 col-lg-6 category-input">
+                                <option class="gray-color">Escolha uma Categoria</option>
+                                <option class="gray-color">Designer</option>
+                                <option class="gray-color">Eletricista</option>
+                                <option class="gray-color">Encanadora</option>
+                            </select>
+                            <div class="col-md-6 col-lg-6 search-input">
+                                <form action="#" class="form-group input-section m-0">
+                                    <input type="text" placeholder="Pesquise por uma Profissional" class="form-control gray-color" name="search-input" value="">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-section col-md-2 col-lg-2">
+                        <div class="profile-tab float-right">
+                            <a class="purple-color">Olá, <span id="displayName" class="user-name"></span>! <i class="fal fa-chevron-down"></i></a>
+                            <ul class="profile-list">
+                                <li id="yourProfile"><i class="fal fa-female"></i> Seu Perfil</li>
+                                <li id="yourConfigs"><i class="fal fa-cog"></i> Configurações</li>
+                                <li id="signOutUser"><i class="fal fa-sign-out"></i> Sair</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="search-header-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="search-info-section profile-info-section col-md-8 col-lg-8 col-sm-12" id="profile-info-section">
+                            <div class="profile-picutre-section col-sm-3">
+                                <img src="images/profile-picture.png" class="img-fluid rounded-picture profile-picture" id="profile-picture">
+                            </div>
+                            <div class="search-infos profile-infos-section col-sm-9">
+                                <h4 class="purple-color small-title" id="user-name"><b>Amanda Vieira</b></h4>
+                                <div class="d-flex w-100 align-items-center">
+                                    <span class="gray-color profissao regular-weight" id="profissao">Mecânica</span>
+                                </div>
+                                <span class="gray-color profissao regular-weight" id="localização">São Paulo, Brasil</span>
+                                <div class="d-flex w-100 align-items-baseline">
+                                    <span class="gray-color"><b>Contato:</b></span>
+                                    <div class="contact-infos">
+                                        <span id="user-email" class="user-email gray-color">amanda.vieira@gmail.com</span>
+                                        <a id="user-phone" class="user-phone gray-color" href="https://api.whatsapp.com/send?phone=55110000000000&text=Ol%C3%A1!%20Tudo%20bom%3F%20Achei%20o%20seu%20contato%20profissional%20pelo%20jobDelas%2C%20gostei%20muito%20do%20seu%20perfil%20e%20queria%20saber%20se%20voc%C3%AA%20tem%20interesse%20em%20bater%20um%20papo!%20%3A)">
+                                            (11) 99999-9999 <small class="green-color">Disponível para whatsapp</small> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section class="modify-profile-items">
+                <form action="#" class="needs-validation" novalidate>
+                    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <div class="infos-section">
+                                <div class="form-group input-section select-section">
+                                    <label for="RG" class="icon-label">Profissão:</label>
+                                    <select class="category-input" required>
+                                        <option class="gray-color">Escolha uma Categoria</option>
+                                        <option class="gray-color">Designer</option>
+                                        <option class="gray-color">Eletricista</option>
+                                        <option class="gray-color">Encanadora</option>
+                                    </select>
+                                </div>
+                                <div class="form-group input-section select-section">
+                                    <label for="foto-perfil" class="icon-label">Foto de Perfil</label>
+                                    <input type="file" class="form-control-file" id="foto-perfil">
+                                </div>
+                                <div class="form-group input-section">
+                                    <label for="name" class="icon-label"><i class="fal fa-signature"></i></label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nome Completo" name="name" required>
+                                    <div class="valid-feedback">Nome válido! :)</div>
+                                    <div class="invalid-feedback">Insira um Nome!</div>
+                                </div>
+                                <div class="form-group input-section">
+                                    <label for="CPF" class="icon-label"><i class="fal fa-id-card"></i></label>
+                                    <input type="CPF" class="form-control" id="CPF" placeholder="CPF" name="CPF" required>
+                                    <div class="valid-feedback">CPF válido! :)</div>
+                                    <div class="invalid-feedback">CPF Inválido!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="infos-section">
+                                <div class="form-group input-section">
+                                    <label for="location" class="icon-label"><i class="fal fa-map-marker"></i></label>
+                                    <input type="location" class="form-control" id="location" placeholder="Sua Localização" name="location" required>
+                                    <div class="valid-feedback">Localização válida! :)</div>
+                                    <div class="invalid-feedback">Localização Inválida!</div>
+                                </div>
+                                <div class="form-group input-section">
+                                    <label for="phone" class="icon-label"><i class="fab fa-whatsapp"></i></label>
+                                    <input type="phone" class="form-control" id="phone" placeholder="Telefone Celular (de preferência whatsapp)" name="phone" required>
+                                    <div class="valid-feedback">Telefone válido! :)</div>
+                                    <div class="invalid-feedback">Telefone Inválido!</div>
+                                </div>
+
+                                <div class="form-group input-section">
+                                    <label for="e-mail" class="icon-label"><i class="fal fa-at"></i></label>
+                                    <input type="text" class="form-control" id="e-mail" placeholder="seuemail@seuemail.com.br" name="e-mail" required>
+                                    <div class="valid-feedback">E-mail válido! :)</div>
+                                    <div class="invalid-feedback">E-mail Inválido!</div>
+                                </div>
+                                <div class="form-group input-section">
+                                    <label for="password" class="icon-label"><i class="fal fa-lock"></i></label>
+                                    <input type="password" class="form-control" id="password" placeholder="Senha desejada" name="password" required>
+                                    <div class="valid-feedback">Senha válida! :)</div>
+                                    <div class="invalid-feedback">Senha Inválida!</div>
+                                </div>
+                                <button type="submit" class="button btn blue-gradient-btn w-100">Atualizar!</button>
+                            </div>
+                        </div>
+                </form>
+
+                </div>
+        </div>
+        </section>
+        </div>
+
+    </main>
+    <section style="background-color:#ededed" id="rodape">
+        <div class="container">
+            <p class="gray-color text-center py-4 small">
+                CLÁUSULA DE RESERVA (Lei 9.610/98 - LEI DE DIREITOS AUTORAIS): Esta plataforma foi publicada e é mantida pelos discentes do 5º semestre, do Curso de Graduação em Design Digital, da Universidade Anhembi Morumbi, visando a atender às exigências da disciplina PROJETO INTERDISCIPLINAR: CIBERATIVISMO. Trata-se de uma publicação temporária para propósitos estritamente acadêmicos e sem fins lucrativos. Em atendimento às exigências da Lei 9.610/98, do parágrafo 4°, do Artigo 184, do Código Penal, os discentes responsáveis por esta publicação colocam-se à disposição, por intermédio do e-mail jobdelas.projetointer@gmail.com, para dirimir quaisquer dúvidas referentes à eventual violação de direitos autorais, comprometendo-se desde já, a retirar do ar, qualquer texto, som ou imagem pertencente a autor ou titular que se sinta direta ou indiretamente prejudicado.
+            </p>
+        </div>
+    </section>
+</body>
+<!-- JS -->
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/fontawesomejs.js" type="text/javascript"></script>
+<!-- FIREBASE SETUP 🔥 -->
+<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+<!-- JobDelas Configs -->
+<script src="js/app.js" type="text/javascript"></script>
+<script src="js/session.js" type="text/javascript"></script>
+<script src="js/home-database.js" type="text/javascript"></script>
+
+</html>
