@@ -1,0 +1,12 @@
+body{
+    background-color: #eaeeef;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}

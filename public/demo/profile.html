@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JobDelas Firebase</title>
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<div class="container mb-5">
+		<div class="row">
+			<div class="col-12 text-center mt-5 mb-5">
+				<h1><strong>Job</strong>Delas Firebase</h1>
+			</div>
+		</div>
+		<!-- Auth js -->
+		<div id="Auth" class="row">
+				<div class="col-12 mt-5">
+						<div class="alert" id="displayName" role="alert">
+						</div>
+				</div>
+		</div>
+		<!-- Database js -->
+		<div id="Database" class="row">
+			<div class="col-12 mt-5">
+				<h3>Editar meus Dados</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<div id="divFotoPerfil" class="form-group">
+					<label for="fotoPerfilInput">Foto de Perfil</label>
+					<input type="file" id="fotoPerfilInput" class="form-control" accept=".png,.jpg,.jpeg">
+				</div>
+				<img class="img-thumbnail" id="fotoPerfilImg" src="css/firebaseload.gif" alt="Profile Image" >
+			</div>
+			<div class="col-12 col-md-9">
+				<div class="form-group">
+					<label for="nomeInput">Nome</label>
+					<input type="text" id="nomeInput" placeholder="Nome" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="sexoInput">Sexo</label>
+					<select id="sexoInput" class="form-control">
+						<option value="">Selecione seu sexo</option>
+						<option value="F">Feminino</option>
+						<option value="M" disabled>Masculino</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="EstrelasInput">Estrelas</label>
+					<input type="number" min="1" max="5" id="EstrelasInput" placeholder="Número de Estrelas" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 mt-2">
+				<h5>Endereço</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<div class="form-group">
+					<label for="cepInput">CEP</label>
+					<input type="text" id="cepInput" placeholder="00.000-00" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h5>Profissão</h5>
+				<div class="form-group">
+					<label for="nomeProfissaoInput">Nome da Profissão</label>
+					<input type="text" id="nomeProfissaoInput" placeholder="Nome da Profissão" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="sobreProfissaoInput">Sobre a Profissão</label>
+					<textarea id="sobreProfissaoInput" rows="2" class="form-control"></textarea>
+				</div>
+				<h5>Projetos</h5>
+				<div class="form-group">
+					<label for="fotoProjetoInput">Foto do Projeto</label>
+					<input type="file" id="fotoProjetoInput" class="form-control"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="tituloProjetoInput">Título do Projeto</label>
+					<input type="text" id="tituloInput" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="descricaoProjetoInput">Descrição do Projeto</label>
+					<input type="text" id="descricaoInput" class="form-control">
+				</div>
+				<h5>Avaliação(ões)</h5>
+				<div class="form-group">
+					<label for="NomeAvaliadoraInput">Nome Avaliadora</label>
+					<input type="text" id="NomeAvaliadoraInput" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="NotaAvalicaoInput">Nota</label>
+					<input type="number" max="5" min="1" id="NotaAvalicaoInput" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="ComentarioAvalicaoInput">Comentário</label>
+					<textarea type="text" rows="2" id="ComentarioAvalicaoInput" class="form-control"></textarea>
+				</div>
+				<h5>Conquistas</h5>
+				<div class="form-group">
+					<label for="TituloConquistaInput">Titulo Conquitas</label>
+					<input type="text" id="TituloConquistaInput" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="ImagemConquistaInput">Nome Imagem Conquitas</label>
+					<input type="text" id="ImagemConquistaInput" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="QuantidadeConquistaInput">Quantidade dessa Conquitas</label>
+					<input type="number" min="1" id="QuantidadeConquistaInput" class="form-control">
+				</div>
+
+			</div>
+			<button id="submitButton" class="btn btn-block btn-primary">Adicionar</button>
+		</div>
+		<div class="row">
+			<div class="col-12 mt-5">
+				<h3>User Debug</h3>
+				<textarea class="form-control" rows="4" id="userDebug">
+				</textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 mt-5">
+				<h3>Lista Usuários</h3>
+				<ul id="userList">
+					<img src="css/firebaseload.gif" style="max-width: 230px;display: block;margin: 0 auto;" class="img-fluid"
+						alt="Loader">
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-12">
+						<hr>
+				</div>
+		</div>
+		<div class="row text-center">
+				<div class="col-12">
+						<button id="signOutUser" class="btn btn-block btn-danger">
+								Sair
+						</button>
+				</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/real-time-database.js"></script>
+	<script src="js/storage.js"></script>
+</body>
+
+</html>
