@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jobDelas - Recrutação de mulhere, para mulheres</title>
+    <meta name="description" content="ecrutação de mulhere, para mulheres" />
+    <meta name="keywords" content="recrutação, jobdelas, hunting, tecnologia, mulheres, feminismo" />
+    <meta name="author" content="raferrreira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--[if IE]>
+          <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+          <![endif]-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- CSS -->
+    <link href="stylesheets/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/responsive.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+
+    <main>
+        <header>
+            <div class="main-nav">
+                <div class="container">
+                    <div class="logo-jobdelas col-md-2 col-lg-2 col-sm-6">
+                        <a href="./index.html">
+                            <img src="images/logo-jobdelas-8.png" class="img-fluid logo">
+                        </a>
+                    </div>
+                    <div class="category-search-content col-md-8 col-lg-8">
+                        <div class="col-md-12 col-lg-12 category-selection pl-5">
+                            <select class="col-md-6 col-lg-6 category-input">
+                                <option class="gray-color">Escolha uma Categoria</option>
+                                <option class="gray-color">Designer</option>
+                                <option class="gray-color">Eletricista</option>
+                                <option class="gray-color">Encanadora</option>
+                            </select>
+                            <div class="col-md-6 col-lg-6 search-input">
+                                <form action="#" class="form-group input-section m-0">
+                                    <input type="text" placeholder="Pesquise por uma Profissional" class="form-control gray-color" name="search-input" value="">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-section col-md-2 col-lg-2">
+                        <div class="profile-tab float-right">
+                            <a class="purple-color">Olá, <span id="displayName" class="user-name"></span>! <i class="fal fa-chevron-down"></i></a>
+                            <ul class="profile-list">
+                                <li><i class="fal fa-female"></i> Seu Perfil</li>
+                                <li><i class="fal fa-cog"></i> Configurações</li>
+                                <li id="signOutUser"><i class="fal fa-sign-out"></i> Sair</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="banner-wrapper woman-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-12 information-section p-0">
+                            <h1 class="gig-text purple-color"><b>Temos as melhores profissionais</b> para o <br/>seu serviço.</h1>
+                            <p class="gray-color"><b>O JobDelas é uma plataforma de recrutação de mulheres,<br/>voltada para mulheres. </b>Cadastre-se como recrutadora, ou<br/>como prestadora de serviço agora mesmo!</p>
+                            <button class="btn button white-bg blue-color shadow-box">
+                                <a href="#" class="blue-color primary-link">Confira Nossas Profissionais da Semana</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section id="selecao-profissionais pb-5 col-md-12 col-lg-12 col-sm-12 align-items-center justify-content-center">
+                <h2 class="medium-title blue-color text-center mt-5 pt-5">Seleção de Profissionais da Semana</h2>
+                <p class="gray-color text-center pb-5">Toda semana separamos pra você as melhores profissionais de cada área, dando assim maior<br/>visibilidade para elas.</p>
+                <div class="row profissionais-categoria align-items-center justify-content-center">
+                    <div class="col-md-10 col-sm-12 col-lg-10 profissionais-categoria-wrap">
+                        <div class="col red-color"><img src="images/design.png" class="img-fluid img-icon">Designers</div>
+                        <div class="col blue-color"><img src="images/code.png" class="img-fluid img-icon">Programadoras</div>
+                        <div class="col yellow-color"><img src="images/ferramentas.png" class="img-fluid img-icon">Mecânicas</div>
+                        <div class="col green-color"><img src="images/eletricista.png" class="img-fluid img-icon">Eletricistas</div>
+                        <div class="col almost-blue-color"><img src="images/encanadora.png" class="img-fluid img-icon">Encanadoras</div>
+                        <div class="col dark-blue-color"><img src="images/seguranca.png" class="img-fluid img-icon">Seguranças</div>
+                    </div>
+                </div>
+            </section>
+            <section class="profissionais-lista col-md-12 col-lg-12 col-sm-12">
+                <div class="row profissionais-semana">
+                    <div class="profissional-card col-md-4 col-lg-4 col-sm-6">
+                        <div class="profissional-card-wrap shadow-box">
+                            <div class="profissional-info">
+                                <div class="profissional-picture">
+                                    <img src="images/profile-picture.gif" class="img-fluid rounded-picture" id="profile-picture" id="profile-picture">
+                                </div>
+                                <div class="profissional-master-info">
+                                    <h4 class="purple-color regular-weight profissional-name"></h4>
+                                    <div>
+                                        <span class="gray-color profissao regular-weight"></span>
+                                        <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profissional-description">
+                                <p class="gray-color regular-weight">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <button class="btn button card-button">
+                                <a href="#" class="primary-link purple-color">- Ver Perfil -</a>
+                            </button>
+                        </div>
+                    </div>  
+                    <div class="profissional-card col-md-4 col-lg-4 col-sm-6">
+                            <div class="profissional-card-wrap shadow-box">
+                                <div class="profissional-info">
+                                    <div class="profissional-picture">
+                                        <img src="images/profile-picture.gif" class="img-fluid rounded-picture" id="profile-picture">
+                                    </div>
+                                    <div class="profissional-master-info">
+                                        <h4 class="purple-color regular-weight profissional-name"></h4>
+                                        <div>
+                                            <span class="gray-color profissao regular-weight"></span>
+                                            <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profissional-description">
+                                    <p class="gray-color regular-weight">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <button class="btn button card-button">
+                                    <a href="#" class="primary-link purple-color">- Ver Perfil -</a>
+                                </button>
+                            </div>
+                    </div>  
+                    <div class="profissional-card col-md-4 col-lg-4 col-sm-6">
+                            <div class="profissional-card-wrap shadow-box">
+                                <div class="profissional-info">
+                                    <div class="profissional-picture">
+                                        <img src="images/profile-picture.gif" class="img-fluid rounded-picture" id="profile-picture">
+                                    </div>
+                                    <div class="profissional-master-info">
+                                        <h4 class="purple-color regular-weight profissional-name"></h4>
+                                        <div>
+                                            <span class="gray-color profissao regular-weight"></span>
+                                            <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profissional-description">
+                                    <p class="gray-color regular-weight">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <button class="btn button card-button">
+                                    <a href="#" class="primary-link purple-color">- Ver Perfil -</a>
+                                </button>
+                            </div>
+                    </div>  
+                    <div class="profissional-card col-md-4 col-lg-4 col-sm-6">
+                            <div class="profissional-card-wrap shadow-box">
+                                <div class="profissional-info">
+                                    <div class="profissional-picture">
+                                        <img src="images/profile-picture.gif" class="img-fluid rounded-picture" id="profile-picture">
+                                    </div>
+                                    <div class="profissional-master-info">
+                                        <h4 class="purple-color regular-weight profissional-name"></h4>
+                                        <div>
+                                            <span class="gray-color profissao regular-weight"></span>
+                                            <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profissional-description">
+                                    <p class="gray-color regular-weight">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <button class="btn button card-button">
+                                    <a href="#" class="primary-link purple-color">- Ver Perfil -</a>
+                                </button>
+                            </div>
+                    </div>  
+                    <div class="profissional-card col-md-4 col-lg-4 col-sm-6">
+                            <div class="profissional-card-wrap shadow-box">
+                                <div class="profissional-info">
+                                    <div class="profissional-picture">
+                                        <img src="images/profile-picture.gif" class="img-fluid rounded-picture" id="profile-picture">
+                                    </div>
+                                    <div class="profissional-master-info">
+                                        <h4 class="purple-color regular-weight profissional-name"></h4>
+                                        <div>
+                                            <span class="gray-color profissao regular-weight"></span>
+                                            <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profissional-description">
+                                    <p class="gray-color regular-weight">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <button class="btn button card-button">
+                                    <a href="#" class="primary-link purple-color">- Ver Perfil -</a>
+                                </button>
+                            </div>
+                    </div>  
+                    <div class="profissional-card col-md-4 col-lg-4 col-sm-6">
+                            <div class="profissional-card-wrap shadow-box">
+                                <div class="profissional-info">
+                                    <div class="profissional-picture">
+                                        <img src="images/profile-picture.gif" class="img-fluid rounded-picture" id="profile-picture">
+                                    </div>
+                                    <div class="profissional-master-info">
+                                        <h4 class="purple-color regular-weight profissional-name"></h4>
+                                        <div>
+                                            <span class="gray-color profissao regular-weight"></span>
+                                            <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profissional-description">
+                                    <p class="gray-color regular-weight">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <button class="btn button card-button">
+                                    <a href="#" class="primary-link purple-color">- Ver Perfil -</a>
+                                </button>
+                            </div>
+                    </div>  
+                </div>
+            </section>
+        </div>
+    </main>
+    
+</body> 
+<!-- JS -->
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/fontawesomejs.js" type="text/javascript"></script>
+<!-- FIREBASE SETUP 🔥 -->
+<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+<!-- JobDelas Configs -->
+<script src="js/app.js" type="text/javascript"></script>
+<script src="js/session.js" type="text/javascript"></script>
+<script src="js/home-database.js" type="text/javascript"></script>
+</html>
